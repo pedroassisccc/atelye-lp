@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O tempo não negocia (e a beleza de ser o menos preparado da mesa) — atelye</title>
+    <meta
+      name="description"
+      content="As experiências que mudaram o curso da minha história nunca nasceram no conforto da segurança. Sobre risco, permanência e a coragem de fazer algo pela primeira vez."
+    />
+    <link rel="canonical" href="/blog/pedroassis-artigo1" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta
+      property="og:title"
+      content="O tempo não negocia (e a beleza de ser o menos preparado da mesa)"
+    />
+    <meta
+      property="og:description"
+      content="As experiências que mudaram o curso da minha história nunca nasceram no conforto da segurança."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #f0f0ee;
+        --paper: #f7f7f5;
+        --ink: #111827;
+        --muted: #6b7280;
+        --faint: #9ca3af;
+        --line: #e3e3df;
+        --accent: #d63300;
+        --accent-bright: #ff3801;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+        background-color: var(--bg);
+        color: var(--ink);
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      /* soft warm glow at the top, echoing the brand */
+      .glow {
+        position: fixed;
+        inset: 0 0 auto 0;
+        height: 480px;
+        pointer-events: none;
+        background: radial-gradient(
+          ellipse 60% 80% at 50% 0%,
+          rgba(255, 56, 1, 0.14),
+          rgba(214, 45, 0, 0.07) 35%,
+          transparent 70%
+        );
+        z-index: 0;
+      }
+
+      .wrap {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ---- top bar ---- */
+      header.nav {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 28px 24px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .brand img {
+        height: 18px;
+        width: auto;
+        display: block;
+      }
+
+      .nav-cta {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--accent);
+        text-decoration: none;
+        border: 1px solid var(--accent-bright);
+        border-radius: 999px;
+        padding: 8px 18px;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+      }
+      .nav-cta:hover {
+        background: var(--accent-bright);
+        color: #fff;
+      }
+
+      /* ---- article ---- */
+      article {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 56px 24px 0;
+      }
+
+      .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--accent);
+        text-decoration: none;
+        margin-bottom: 28px;
+        transition: gap 0.2s ease, color 0.2s ease;
+      }
+      .back:hover {
+        gap: 10px;
+        color: var(--accent-bright);
+      }
+
+      .eyebrow {
+        font-size: 11.5px;
+        font-weight: 500;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin: 0 0 18px;
+      }
+
+      h1 {
+        font-family: "Newsreader", Georgia, "Times New Roman", serif;
+        font-weight: 500;
+        font-size: clamp(2rem, 5.4vw, 2.85rem);
+        line-height: 1.14;
+        letter-spacing: -0.012em;
+        margin: 0 0 22px;
+        text-wrap: balance;
+      }
+
+      .meta {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-bottom: 30px;
+        margin-bottom: 38px;
+        border-bottom: 1px solid var(--line);
+      }
+      .avatar {
+        width: 38px;
+        height: 38px;
+        border-radius: 999px;
+        background: linear-gradient(140deg, #ff3801, #d63300);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        font-size: 14px;
+        font-weight: 600;
+        flex: none;
+      }
+      .meta .who {
+        font-size: 13.5px;
+        font-weight: 600;
+        color: var(--ink);
+        line-height: 1.3;
+      }
+      .meta .when {
+        font-size: 12.5px;
+        color: var(--faint);
+        line-height: 1.3;
+      }
+
+      /* body copy */
+      .body {
+        font-size: 1.085rem;
+        line-height: 1.78;
+        color: #1f2430;
+      }
+      .body p {
+        margin: 0 0 1.45em;
+      }
+      .body p.lead {
+        font-size: 1.22rem;
+        line-height: 1.6;
+        color: #2b313d;
+      }
+      .body strong {
+        font-weight: 600;
+        color: var(--ink);
+      }
+      .body em {
+        font-style: italic;
+      }
+
+      .pull {
+        font-family: "Newsreader", Georgia, serif;
+        font-style: italic;
+        font-size: 1.5rem;
+        line-height: 1.42;
+        color: var(--ink);
+        margin: 2em 0;
+        padding-left: 22px;
+        border-left: 3px solid var(--accent-bright);
+      }
+
+      .closer {
+        font-family: "Newsreader", Georgia, serif;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        color: var(--ink);
+        margin: 1.6em 0;
+      }
+
+      hr.rule {
+        border: none;
+        border-top: 1px solid var(--line);
+        margin: 52px 0 0;
+      }
+
+      /* ---- end / footer ---- */
+      footer {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 40px 24px 80px;
+      }
+      .signoff {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .signoff .left {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .signoff .left b {
+        color: var(--accent);
+        font-weight: 600;
+      }
+      .signoff a.cta {
+        font-size: 13px;
+        font-weight: 500;
+        color: #fff;
+        background: var(--accent-bright);
+        text-decoration: none;
+        border-radius: 999px;
+        padding: 10px 20px;
+        transition: background 0.2s ease;
+      }
+      .signoff a.cta:hover {
+        background: var(--accent);
+      }
+
+      @media (max-width: 520px) {
+        .body {
+          font-size: 1.02rem;
+        }
+        .pull {
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glow" aria-hidden="true"></div>
+
+    <div class="wrap">
+      <header class="nav">
+        <a class="brand" href="/" aria-label="atelye">
+          <img src="/atelye-wordmark.svg" alt="atelye" />
+        </a>
+        <a class="nav-cta" href="/#planos">Conhecer o atelye</a>
+      </header>
+
+      <article>
+        <a class="back" href="/">← Voltar ao início</a>
+
+        <p class="eyebrow">Reflexão</p>
+
+        <h1>O tempo não negocia (e a beleza de ser o menos preparado da mesa)</h1>
+
+        <div class="meta">
+          <div class="avatar">PA</div>
+          <div>
+            <div class="who">Pedro Assis</div>
+            <div class="when">14 de junho de 2026 · 4 min de leitura</div>
+          </div>
+        </div>
+
+        <div class="body">
+          <p class="lead">
+            Quando olho pelo retrovisor hoje, a gratidão que sinto não é pelos
+            momentos em que eu estava no controle.
+          </p>
+
+          <p>
+            Sou grato, de verdade, por ter trocado o certo pelo duvidoso. Pelos
+            riscos que deram muito certo e, principalmente, pelas apostas que me
+            fizeram perder o sono de tanta ansiedade quando deram errado.
+          </p>
+
+          <p>
+            Porque, sendo brutalmente honesto, as experiências que mudaram o
+            curso da minha história nunca nasceram no conforto da segurança. Elas
+            nasceram exatamente onde o meu ego terminava e o meu medo começava.
+          </p>
+
+          <p>
+            Nasceram quando eu decidi abrir portas de salas onde eu claramente
+            era o cara menos preparado da mesa. Quando engoli a seco o frio na
+            barriga para conversar com pessoas que eu admirava de longe. Quando
+            disse <strong>"sim"</strong> para desafios que pareciam três vezes
+            maiores do que a minha capacidade na época, apostando tudo num
+            caminho cujo final eu sequer conseguia enxergar.
+          </p>
+
+          <p>
+            Tem uma pergunta que ecoa na minha cabeça constantemente, quase como
+            um alarme:
+          </p>
+
+          <p class="pull">
+            "Qual foi a última vez que você fez algo pela primeira vez?"
+          </p>
+
+          <p>
+            Quanto mais o tempo passa, mais eu tenho certeza de que essa é a
+            métrica definitiva para saber se estamos vivos ou apenas existindo.
+            Porque o processo de envelhecer por dentro é silencioso. Sem
+            perceber, vamos construindo rotinas confortáveis, paredes seguras e
+            justificativas perfeitas para não tentar de novo.
+          </p>
+
+          <p>
+            Aos poucos, a gente troca a aventura por um contracheque emocional.
+            Trocamos o frio na barriga por explicações lógicas.
+          </p>
+
+          <p>E é exatamente nesse ponto que muita gente para de viver.</p>
+
+          <p>
+            O cemitério dos bons projetos está cheio de pessoas que não
+            fracassaram porque tentaram demais. Elas fracassaram porque pararam.
+            Porque compraram a ideia de que o primeiro obstáculo era um sinal do
+            universo para voltar atrás, quando na verdade era apenas o pedágio
+            natural do caminho.
+          </p>
+
+          <p>
+            Quando eu observo as pessoas que mais admiro hoje, eu não vejo
+            currículos perfeitos ou trajetórias lineares. O que eu vejo são
+            cicatrizes.
+          </p>
+
+          <p>
+            Vejo histórias de uma insistência quase irracional. Pessoas que
+            continuaram caminhando quando a lógica dizia para parar. Que ouviram
+            cem <em>"nãos"</em> antes do primeiro <em>"sim"</em>. Que passaram
+            anos plantando no escuro, sem nenhuma garantia de colheita.
+          </p>
+
+          <p>
+            Talvez seja por isso que eu me sinta tão privilegiado. Não pelos
+            lugares que carimbei no passaporte ou pelas empresas que construímos,
+            mas porque a vida me bateu cedo o suficiente para eu aprender a regra
+            de ouro:
+          </p>
+
+          <p class="closer">
+            O jogo quase sempre recompensa quem permanece nele tempo suficiente.
+          </p>
+
+          <p>
+            A vitória não é um monopólio dos mais inteligentes, nem dos mais
+            talentosos. Ela pertence àqueles que continuam avançando no momento
+            exato em que a maioria decide desistir.
+          </p>
+
+          <p>
+            Hoje, neste aniversário, se eu pudesse empacotar tudo o que aprendi e
+            entregar para quem me acompanha, não seria uma celebração sobre a
+            minha idade. Seria um aviso sobre o seu tempo:
+          </p>
+
+          <p class="pull">
+            Existe muita vida, muito dinheiro e muita história incrível esperando
+            por você do outro lado do seu medo.
+          </p>
+
+          <p>
+            Os melhores capítulos do seu livro ainda estão em branco. Talvez a
+            grande virada de chave que você pede a Deus esteja escondida atrás de
+            uma conversa difícil que você está adiando. De um projeto que você tem
+            medo de lançar. De um risco que você ainda não teve a ousadia de
+            correr.
+          </p>
+
+          <p>
+            Uma vida extraordinária não é um acidente cósmico. Ela é desenhada à
+            mão por pessoas comuns que sentem pavor da ideia de viver no piloto
+            automático.
+          </p>
+
+          <p>
+            Então, faça um favor a si mesmo: <strong>continue.</strong>
+            Arrisque de forma calculada, mas arrisque. Seja o mais burro da mesa
+            de propósito. Viaje mais. Crie conexões reais. Entre em ambientes que
+            te deixem desconfortável.
+          </p>
+
+          <p><strong>Colecione histórias, não explicações.</strong></p>
+
+          <p>
+            Porque no final do dia, o tempo é implacável. Ele vai passar de
+            qualquer maneira, você fazendo algo genial ou ficando no sofá.
+          </p>
+
+          <p>A única diferença é quem você decidiu se tornar enquanto ele passava.</p>
+        </div>
+
+        <hr class="rule" />
+      </article>
+
+      <footer>
+        <div class="signoff">
+          <p class="left">
+            Escrito por <b>Pedro Assis</b> · um produto Walks
+          </p>
+          <a class="cta" href="/#planos">Conhecer o atelye</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
